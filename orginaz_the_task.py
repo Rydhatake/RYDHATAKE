@@ -17,4 +17,3 @@ chose=input("you wanna to see you task you day : \n ")
 if chose=="yes":
     print(f"you do't do today {not_don_task}")
     print(f"you finsh to day {don_task}")
-    print(f"you do't do today {not_don_task}")
