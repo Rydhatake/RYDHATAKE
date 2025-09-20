@@ -1,6 +1,5 @@
+import random
 while True:
-    import random
-
     # ASCII art
     siser = """...scissors art..."""
     rock = """...rock art..."""
@@ -41,3 +40,4 @@ while True:
         print("🎉 You win!")
     else:
         print("💻 Computer wins!")
+
