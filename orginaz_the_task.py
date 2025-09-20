@@ -1,19 +1,26 @@
-task=input("enter you task of today : \n").split(", ")
-don_task=[]
-not_don_task=[]
-for fankshing in task:
-    print(f"\n {fankshing}\n ")
-    finsh=input("are finsh that : \n ")
-    if finsh == "yes":
-        print("good job keep up ")
-        don_task.append(fankshing)
-    elif finsh=="no":
-        print("try do that to day ")
-        not_don_task.append(fankshing)
+# Ask user for tasks (separated by comma and space)
+tasks = input("Enter your tasks for today (separate them with ', '): \n").split(", ")
+
+done_tasks = []
+not_done_tasks = []
+
+for task in tasks:
+    print(f"\nTask: {task}\n")
+    finished = input("Did you finish this task? (yes/no): \n ").lower()
+
+    if finished == "yes":
+        print("✅ Good job, keep it up!")
+        done_tasks.append(task)
+    elif finished == "no":
+        print("⚠️ Try to complete it today!")
+        not_done_tasks.append(task)
     else:
-        print(f"i do't undrstand {finsh} but if you finsh your task so you doing good \nand if you do't you have do that today")
+        print(f"🤔 I didn't understand '{finished}', but if you finished your task, good work!\nIf not, try to do it today.")
+
     print("------------------")
-chose=input("you wanna to see you task you day : \n ")
-if chose=="yes":
-    print(f"you do't do today {not_don_task}")
-    print(f"you finsh to day {don_task}")
+
+choice = input("Do you want to see a summary of your tasks today? (yes/no): \n ").lower()
+
+if choice == "yes":
+    print(f"\n📌 Tasks not done today: {not_done_tasks}")
+    print(f"✅ Tasks finished today: {done_tasks}")
